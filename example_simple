@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="d3.parcoords.js"></script>
+<link rel="stylesheet" type="text/css" href="d3.parcoords.css">
+<div id="example" class="parcoords" style="width:360px;height:150px"></div>
+
+<script>
+var data = [
+  [0,-0,0,0,0,3 ],
+  [1,-1,1,2,1,6 ],
+  [2,-2,4,4,0.5,2],
+  [3,-3,9,6,0.33,4],
+  [4,-4,16,8,0.25,9]
+];
+
+var pc = d3.parcoords()("#example")
+  .data(data)
+  .render()
+  .flipAxes(["0"])
+  .createAxes();
+</script>
+    
+    </body>
+</html>
